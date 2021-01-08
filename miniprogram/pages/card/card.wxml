@@ -1,0 +1,207 @@
+<!--pages/card/card.wxml-->
+<view class="ll">
+  <view class="firstitem">
+    <view class="content">
+      <text class="name">1.公交集团充值点</text>
+      <text class="address" bindtap='go01czd'>环城北路38号</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">2.衡阳火车站充值点</text>
+      <text class="address" bindtap='go02czd'>火车站广场内</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">3.衡阳东站充值点</text>
+      <text class="address" bindtap='go03czd'>东站公交站台旁</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">4.中心汽车站充值点</text>
+      <text class="address" bindtap='go04czd'>公交站台旁</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">5.政务中心充值点</text>
+      <text class="address" bindtap='go05czd'>政务中心二楼C区</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">6.解放路充值点</text>
+      <text class="address" bindtap='go06czd'>工行大厦左侧五福庵巷口</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">7.船山路充值点</text>
+      <text class="address" bindtap='go07czd'>附一对面（步步高旁）</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">8.商业步行街充值点</text>
+      <text class="address" bindtap='go08czd'>石化广场旁</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">9.华新步步高充值点</text>
+      <text class="address" bindtap='go09czd'>一楼步步高超市旁</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">10.雁峰充值点</text>
+      <text class="address" bindtap='go10czd'>中山南路1-3号</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">11.白沙洲充值点</text>
+      <text class="address" bindtap='go11czd'>白沙大道98号</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">12.华源充值点</text>
+      <text class="address" bindtap='go12czd'>黄沙湾51号电信公司门口</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">13.苗圃充值点</text>
+      <text class="address" bindtap='go13czd'>珠晖服务里65号</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">14.金山邮政所充值点</text>
+      <text class="address" bindtap='go14czd'>延安路38号（市委附近）</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="item">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">15.立新大道充值点</text>
+      <text class="address" bindtap='go15czd'>立新新村（香江百货对面）</text>
+    </view>
+    <view class="leftdot"></view>
+    <view class="rightdot"></view>
+    <view class="borderline"></view>
+  </view>
+  <view class="enditem">
+    <view class="topleftdot"></view>
+    <view class="toprightdot"></view>
+    <view class="content">
+      <text class="name">16.电厂充值点</text>
+      <text class="address" bindtap='go16czd'>电厂对面</text>
+    </view>
+  </view>
+</view>
+
+<view class="tips">
+  <view class="wenzi">
+  <view class="title">优惠政策及机器提示</view>
+  <text selectable="true" class="detail">公交IC卡全国一卡通是一种方便、快捷的乘车支付方式，从2018年8月开始发行（原卡按原方式照常使用），乘客在使用中应注意以下事项：
+一.乘客在乘车时每次刷卡按七折扣款(异地乘车刷卡按异地刷卡标准执行)；
+二.乘客在刷卡时应注意刷卡机的声音及灯光提示，具体有如下几种：
+1.正常刷卡，刷卡机发出“嘀”一声，红灯亮一下，交易完毕；
+2.乘客刷卡太快，交易未完成而将卡移开，刷卡机会发出不间断蜂鸣声或语音提示“请重刷”，这是提示乘客重刷一次卡；
+3.卡内余额不足五次消费时，语音提示“请充值”提示乘客及时去充值点充值，以免影响乘客下次乘车，但该次刷卡有效；
+4.当卡内余额不足本次消费时，语音提示“请投币”，这是提示乘客卡内金额少于乘车费用，请乘客投币；
+5.当遇到黑名单卡时，语音提示“非法卡”，这是提示乘客该卡是挂失卡，不能使用；
+6.当遇到刷卡时刷卡机无反应，而别的乘客的卡能正常刷卡时，则是该卡已损坏，乘客需投币乘车并在一个月内持坏卡到公交集团有限公司售卡点客服部（石鼓区环城北路38号）办理更换坏卡的手续。如是因受外力损坏（如卡断裂、打孔等情形）则卡的工本费由乘客自负，卡内余额转到新购卡中；如是卡芯片质量问题，公交集团有限公司无偿更换一张新卡给乘客，并将卡内余额转入新卡中；
+7.乘客可按刷卡机面板上的按钮查询卡的本次消费记录及卡内余额；
+8.全国城市公交IC卡刷卡机有此标志 ，均可刷卡使用。
+</text>
+</view>
+</view>
+
+<view class="tips">
+  <view class="wenzi">
+  <view class="title">购卡充值注意事项</view>
+  <text selectable="true" class="detail">一.公交IC卡，实行全国一卡通，购卡张数不限；卡工本费：10元/张（不退卡、可反复充值使用），充值限额20元起；请做文明市民，依次排队，留有一定安全距离。
+二.充值实行现金和扫码缴费，钱币当面验清，离柜概不负责；
+三.充值点营业时间：7：30-16：30（具体时间以各充值点公布为准）；
+四.老卡凭身份证或小票办理挂失、坏卡转新卡业务；全国一卡通不记名、不挂失；
+五.客户服务中心咨询电话：8217127、8214620。
+六.衡阳市公交集团发行的公交IC卡目前仅限于在以上所列出充值点充值。
+</text>
+</view>
+</view>
+
+

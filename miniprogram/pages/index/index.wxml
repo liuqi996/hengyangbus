@@ -1,0 +1,105 @@
+<!--pages/index/index.wxml-->
+<view class="marquee_container" style="--marqueeWidth--:-32em">
+  <view class="marquee_text">温馨提示：疫情防控尚未解除，乘坐公共交通工具请注意全程佩戴口罩，请勿关严车窗，保持空气流通，请尽量分散就坐！</view>
+</view>
+<!--跑马灯-->
+
+<view class="search">
+  <view class="search_bar">
+    <input class="input" placeholder="请输入您要查询的公交线路或站台名称" value="{{searchvalue}}" bindinput="sousuo"></input>
+    <image class="icon" src="../../images/search.png" bindtap="search"></image>
+  </view>
+  <scroll-view class="search_result" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" style="max-height:440rpx">
+  <!-- <view wx:for="{{lists}}" class="item" style="{{item.line == searchvalue?'color:#4E70C7':''}}">
+    <view>{{item.line}}</view>
+  </view> -->
+
+  <view wx:for="{{searchResultList}}" wx:key="index" class="item" data-line="{{item.line}}" bindtap="line">
+    <view class="searchResultItem-context">
+      <text wx:for="{{item.searchArray}}" wx:for-item="item2"  wx:key="index2" style="{{item2 == searchvalue?'color:#4E70C7':''}}">{{item2}}</text>
+    </view>
+</view>
+  </scroll-view>
+</view>
+
+
+<view class="near_est_station">
+  <view class="title">当前位置
+    <view class="icon iconfont icon-refresh" bindtap="getMyLocation"></view>
+  </view>
+  <view class="location_detail">
+    <view class="icon iconfont icon-location"></view>
+    <view class="name">{{myLocation}}</view>
+  </view>
+  <view class="tip">温馨提示：如果您的位置显示不正确，请确认打开手机定位和授权允许小程序访问位置后，点击上方的刷新图标。</view>
+</view>
+
+<view class="near_est_station">
+  <view class="title">附近公交站台</view>
+  <view class="station" data-id="{{nearestStation.id}}" data-name="{{nearestStation.name}}" data-zhandian="{{nearestStation.name}}" bindtap="tongzhan" data-zhandian="{{nearestStation.name}}">
+    <view class="detail">
+      <view class="icon iconfont icon-station"></view>
+      <view class="name">{{nearestStation.name}}</view>
+    </view>
+    <view class="distance">{{nearestStation.distance}}米</view>
+  </view>
+</view>
+
+<!-- <view style="width: 96%;margin-top: 10px;margin-left: 2%;margin-right: 2%;background-color: #fff;border-radius: 5px;">
+  <view class="title" style="color:#1CB5E0;padding-top: 13px;margin-left: 10px;font-size: 14px;font-weight: 700;letter-spacing: 1px;display: flex;align-items: baseline;">猜你想去</view>
+  <swiper style="width:90%;height:120px;margin-left:5%;margin-right:5%;padding-bottom:15px;" vertical="true" next-margin="30px">
+    <swiper-item class="swp" style="background: linear-gradient(to top, #e5eee2, #f9d4f4);color:#41295a">航城方向</swiper-item>
+    <swiper-item class="swp" style="background: linear-gradient(to bottom, #22e3a2, #039ef1);color:#fff">高铁站（衡阳东）</swiper-item>
+    <swiper-item class="swp" style="background: linear-gradient(to bottom, #f81449, #f6aa97);">陆家新区</swiper-item>
+  </swiper>
+</view> -->
+<!-- display:flex;white-space:nowrap; -->
+<!-- <view class="ydkl">
+  <image src="cloud://bus-bus.6275-bus-bus-1302067424/首页/ydkl.gif" mode="widthFix" style="margin-top:10px;width:100%"></image>
+</view> -->
+
+<view class="other" bindtap="searchbusstation">
+  加载更多站台及线路信息
+</view>
+
+<view wx:if="{{m0.length==0 || m0==undefine}}">
+
+</view>
+<view wx:else>
+<view class="nearestbus">
+  <view class="stationmessage">
+    <image class="nearststationicon" src="/images/index-station.png"></image>
+    <view class="stationname">{{nearbusstation[0].title}}</view>
+    <text class="nearestdistance">{{nearbusstation[0]._distance}}M</text>
+  </view>
+  <view class="line"><view wx:for="{{m0}}" class="lineitem">{{item}}</view></view>
+</view>
+</view>
+
+<!-- <view wx:for="{{searchResultList}}" wx:key="index">
+  <view class="searchResultItem">
+    <view class="searchResultItem-context">
+      <text wx:for="{{item.searchArray}}" wx:for-item="item2"  wx:key="index2" style="{{item2 == searchvalue?'color:#4E70C7':''}}">{{item2}}</text>
+    </view>
+  </view>
+</view> -->
+<view wx:for="{{cc}}" wx:for-index="idx" class="othernearstation">
+  <view class="stationmessage">
+    <image class="nearststationicon" src="/images/index-station.png"></image>
+    <view class="stationname">{{item.title}}</view>
+    <text class="nearestdistance">{{item._distance}}M</text>
+  </view>
+  <!-- <view class="line">{{item.address}}</view> -->
+  <view wx:if="{{idx==0}}">
+    <view class="line"><view wx:for="{{m1}}" class="lineitem">{{item}}</view></view>
+  </view>
+  <view wx:elif="{{idx==1}}">
+    <view class="line"><view wx:for="{{m2}}" class="lineitem">{{item}}</view></view>
+  </view>
+  <view wx:elif="{{idx==2}}">
+    <view class="line"><view wx:for="{{m3}}" class="lineitem">{{item}}</view></view>
+  </view>
+  <view wx:else="{{idx==3}}">
+    <view class="line"><view wx:for="{{m4}}" class="lineitem">{{item}}</view></view>
+  </view>
+</view>

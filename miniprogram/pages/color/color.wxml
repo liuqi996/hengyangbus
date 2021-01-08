@@ -1,0 +1,77 @@
+<!--pages/color/color.wxml-->
+<!-- <view class="lbt">
+  <swiper>
+    <swiper-item></swiper-item>
+    <swiper-item></swiper-item>
+    <swiper-item></swiper-item>
+  </swiper>
+</view> -->
+
+<!-- <view class="gridmenu">
+  <view>
+    <image src="../../images/year.png" mode="widthFix"></image>
+  </view>
+  <view>
+    <image></image>
+  </view>
+  <view>
+    <image></image>
+  </view>
+  <view>
+    <image></image>
+  </view>
+</view> -->
+
+<view class="twopicmenu">
+  <view class="img">
+    <image src="../../images/town.png" mode="widthFix" class="png" bindtap="countryside"></image>
+  </view>
+  <view class="img">
+    <image src="../../images/card.png" mode="widthFix" class="png" bindtap="card"></image>
+  </view>
+</view>
+
+<view class="picmenu">
+  <image src="../../images/getstation.png" mode="widthFix" class="img" bindtap="zsgj"></image>
+</view>
+
+<view class="picmenu">
+  <image src="../../images/jtlh.png" mode="widthFix" class="img" bindtap="jtlh"></image>
+</view>
+
+<!-- <view class="news">
+  <view class="title"></view>
+  <view wx:for="">
+    <view class="item">
+      <image></image>
+      <view>
+        <text class="title"></text>
+        <text class="date"></text>
+      </view>
+    </view>
+  </view>
+</view> -->
+<!-- <view class="main">
+    <view class="header-search">
+        <image class="searchImg" src="/images/search_icon.png" mode="aspectFill" ></image>
+        <input type="text" class="searchInput" focus="{{autoFocus}}" hold-keyborad="true" placeholder="请输入名称进行搜索" placeholder-style="color:#999999" bindinput = "input"></input>
+        <view class="clearInput" bindtap = "clearInput" wx:if="{{searchText}}">
+            <image class="clearInputImg" src="/images/clear.png" mode="aspectFill" ></image>
+        </view>
+    </view>
+    <view style="padding: 0 24rpx;">
+        <view class="searchResult" wx:if="{{searchText}}">
+             <view class="searchText" data-type="1" bindtap = "toHandleSearch">搜索"{{searchText}}"</view>
+             <view class="border-LR"></view>
+        </view>
+        <view wx:for="{{searchResultList}}" wx:key="index">
+            <view class="searchResultItem" data-type="2" bindtap = "toHandleSearch">
+                <image class="searchImg2" src="/images/search_icon.png" mode="aspectFill" ></image>
+                <view class="searchResultItem-context">
+                    <text wx:for="{{item.searchArray}}" wx:for-item="item2"  wx:key="index2" style="{{item2 == searchText?'color:#4E70C7':''}}">{{item2}}</text>
+                </view>
+            </view>
+            <view class="border-item-LR"></view>
+        </view>
+    </view>
+</view> -->

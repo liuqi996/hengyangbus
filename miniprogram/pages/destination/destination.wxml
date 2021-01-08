@@ -1,0 +1,226 @@
+<!--pages/destination/destination.wxml-->
+<view class="hottitle">2020十大网红地标</view>
+<view class="hothangline">
+  <view class="hotleft" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E8%B6%85%E7%BA%A7%E7%A8%BB.jpg?sign=82e689d7b83a95da1b5ca16769884619&t=1609292687)">
+    <view class="tbj">超级稻试验田<text class="stext">\n（衡南县清竹村）</text></view>
+  </view>
+  <view class="hotright" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E5%A4%8F%E6%98%8E%E7%BF%B0.jpg?sign=4ac0e5260b7eeabda7aae6102ec78a48&t=1609292670)">
+    <view class="tbj">
+      夏明翰故居及党性教育基地
+    </view>
+  </view>
+</view>
+<view class="hothangline">
+  <view class="hotleft" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E5%8D%97%E5%B2%B3%E9%9B%BE%E5%87%87.jpg?sign=21c63b3ed2e855b6f87a7efcbf89731d&t=1609292653)">
+    <view class="tbj">祝融峰云海及雾凇<text class="stext">\n（南岳衡山旅游风景区）</text></view>
+  </view>
+  <view class="hotright" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E7%A6%8F%E4%B8%A5%E5%AF%BA.jpg?sign=b0e3fc020fd77f9d5ee64faecca7beba&t=1609292637)">
+    <view class="tbj">
+      福严寺千年银杏<text class="stext">\n（南岳衡山旅游风景区）</text>
+    </view>
+  </view>
+</view>
+<view class="hothangline">
+  <view class="hotleft" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E7%9F%B3%E9%BC%93%E4%B9%A6%E9%99%A2.jpg?sign=c2b53869cf04b287fcd39ef34ae5599d&t=1609292610)">
+    <view class="tbj">石鼓书院及双江汇流</view>
+  </view>
+  <view class="hotright" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E4%B8%9C%E6%B4%B2%E5%B2%9B.jpg?sign=699b040d55266a8bede21b15296d7e7f&t=1609292595)">
+    <view class="tbj">
+      东洲岛及两岸湖湘文化聚集区
+    </view>
+  </view>
+</view>
+<view class="hothangline">
+  <view class="hotleft" style="background-image: url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E9%93%81%E8%B7%AF%E5%8D%9A%E7%89%A9%E9%A6%86.jpg?sign=7cb00ad1a884769cf936cd2adff52bdc&t=1609292577)">
+    <view class="tbj">衡阳铁路博物馆及建湘老工业街区</view>
+  </view>
+  <view class="hotright" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E6%B8%85%E8%8A%B1%E6%B9%BE.jpg?sign=f0b1ef829d95e32ae6f3d9ab3b9bb6b3&t=1609292563)">
+    <view class="tbj">
+      清花湾
+    </view>
+  </view>
+</view>
+<view class="hothangline">
+  <view class="hotleft" style="background-image:url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E5%B9%B3%E5%AE%89%E6%B2%B9%E8%8C%B6%E5%B0%8F%E9%95%87.jpg?sign=c20f5e3911398db5581c145d2cfc075d&t=1609292394)">
+    <view class="tbj">平安油茶小镇</view>
+  </view>
+  <view class="hotright" style="background-image: url(https://6275-bus-bus-1302067424.tcb.qcloud.la/%E7%8C%9C%E4%BD%A0%E6%83%B3%E5%8E%BB/%E7%BD%91%E7%BA%A2%E5%9C%B0%E6%A0%87/%E7%A5%9D%E8%9E%8D%E5%AD%A6%E9%99%A2.jpg?sign=aeba586240884ac41978b35e24a7935d&t=1609292542);">
+    <view class="tbj">
+      祝融学院<text class="stext">\n（直播学院）</text>
+    </view>
+  </view>
+</view>
+<view class="title">交通枢纽</view>
+<!-- <view class="hangline">
+  <view class="left" style="background-color:#54b27a">
+    <view>航城方向<text>\n（南岳机场方向）</text></view>
+  </view>
+  <view class="right" style="background-color:#5eb67b">
+    <view>
+      衡阳东站<text>\n（高铁站方向）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#84c87f">
+    <view>衡阳站<text>\n（火车站方向）</text></view>
+  </view>
+  <view class="right" style="background-color:#abd984">
+    <view>
+      西渡站<text>\n（西渡高铁站方向）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#bee286">中心汽车站</view>
+  <view class="right" style="background-color:#c8e687">华新汽车站</view>
+</view> -->
+<view class="hangline">
+  <view class="left" style="background-color:#021B79">
+    <view>航城方向<text class="stext">\n（南岳机场方向）</text></view>
+  </view>
+  <view class="right" style="background-color:#2F80ED">
+    <view>
+      衡阳东站<text class="stext">\n（高铁站方向）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#0575E6">
+    <view>衡阳站<text class="stext">\n（火车站方向）</text></view>
+  </view>
+  <view class="right" style="background-color:#56CCF2">
+    <view>
+      西渡站<text class="stext">\n（西渡高铁站方向）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#5B86E5">中心汽车站</view>
+  <view class="right" style="background-color:#36D1DC">华新汽车站</view>
+</view>
+
+<view class="title">购物中心</view>
+<view class="hangline">
+  <view class="left" style="background-color:#8351D8">
+    <view>
+      杉杉奥莱<text class="stext">\n（杉杉奥特莱斯）</text>
+    </view>
+  </view>
+  <view class="right" style="background-color:#E6212A">
+    <view>
+      蒸湘万达<text class="stext">\n（万达广场）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#008CF1">
+    <view>弘阳广场<text class="stext">\n（南华附近）</text></view>
+  </view>
+  <view class="right" style="background-color:#00AF64">
+    <view>
+      酃湖万达<text class="stext">\n（暂未开业）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#E4A530">
+    <view>
+      王府井<text class="stext">\n（暂未开业）</text>
+    </view>
+  </view>
+  <view class="right" style="background-color:#2CADB4">步步高广场</view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#FE5F48">
+    <view>
+      晶珠广场<text class="stext"></text>
+    </view>
+  </view>
+  <view class="right" style="background-color:#E76581">大洋百货</view>
+</view>
+<view class="title">公园景区</view>
+<view class="hangline">
+  <view class="left" style="background-color:#155799">
+    <view>陆家中心公园<text class="stext">\n（科技感十足）</text></view>
+  </view>
+  <view class="right" style="background-color:#159957">
+    <view>
+      千年石鼓书院<text class="stext">\n（中国四大书院之一）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#B06AB3">
+    <view>东洲岛<text class="stext">\n(橘洲齐名,湘江三洲之一)</text></view>
+  </view>
+  <view class="right" style="background-color:#b21f1f">
+    <view>
+      抗战纪念城<text class="stext">\n（全国唯一）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#fdbb2d">
+    <view>铁路博物馆<text class="stext">\n(见证广铁集团历史)</text></view>
+  </view>
+  <view class="right" style="background-color:#ffaf7b">
+    <view>
+      丰家洲网红桥<text class="stext">\n（人多热闹）</text>
+    </view>
+  </view>
+</view>
+<view class="title">高等教育</view>
+<view class="hangline">
+  <view class="left" style="background-color:#0A4591">
+    <view>南华大学<text class="stext">\n(共和国国防和卫生事业)</text></view>
+  </view>
+  <view class="right" style="background-color:#CE2A2E">
+    <view>
+      衡阳师范学院<text class="stext">\n（师范院校）</text>
+    </view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#277DCB">
+    <view>湖南工学院</view>
+  </view>
+  <view class="right" style="background-color:#087BD6">
+    <view>高铁学院<text class="stext">\n(湖南高速铁路职业技术学院)</text></view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#0C59A8">
+    <view>湖南交通工程学院</view>
+  </view>
+  <view class="right" style="background-color:#0C59A8">
+    <view>船山学院<text class="stext">\n(南华大学船山学院)</text></view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#0D3676">
+    <view>南岳学院<text class="stext">\n(衡阳师范学院南岳学院)</text></view>
+  </view>
+  <view class="right" style="background-color:#66BA4E">
+    <view>湘环<text class="stext">\n(湖南环境生物职业技术学院)</text></view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#46B1DD">
+    <view>财工院<text class="stext">\n(湖南财经工业职业技术学院)</text></view>
+  </view>
+  <view class="right" style="background-color:#3245B7">
+    <view>技师学院<text class="stext">\n(衡阳技师学院)</text></view>
+  </view>
+</view>
+<view class="hangline">
+  <view class="left" style="background-color:#018AE2">
+    <view>工商学院<text class="stext">\n(湖南工商职业学院)</text></view>
+  </view>
+  <view class="right" style="background-color:#037CB5">
+    <view>衡幼专<text class="stext">\n(衡阳幼儿师范高等专科学校)</text></view>
+  </view>
+</view>
+<!-- background: #DA4453;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ -->

@@ -1,0 +1,131 @@
+/* pages/card/card.wxss */
+page{
+  /* background-color: lawngreen; */
+  /* background-color: rgb(122, 1, 170); */
+  background-color: #288FDA;
+}
+.firstitem{
+  margin-top: 10px;
+  width: 90%;
+  height: 50px;
+  margin-left: 5%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  /* border-bottom:dashed 0.5px grey; */
+}
+.borderline{
+  width: 90%;
+  left:5%;
+  top:50px;
+  position: absolute;
+  border-bottom:dashed 0.5px grey;
+  /* outline: ; */
+  /* z-index: 100; */
+  z-index: 10000;
+}
+/* .leftdot{
+  width: 10px;
+  height: 10px;
+  border-radius: 0 10px 10px 0;
+  background-color: #288FDA;
+} */
+.leftdot{
+  width: 8px;
+  height: 8px;
+  border-radius: 0 8px 0 0;
+  /* height: 20px;
+  border-radius: 0 10px 10px 0; */
+  background-color: #288FDA;
+  position: absolute;
+  top: 42px;
+  /* z-index: 100; */
+}
+.rightdot{
+  width: 8px;
+  height: 8px;
+  border-radius: 8px 0 0 0;
+  /* height: 20px;
+  border-radius: 0 10px 10px 0; */
+  background-color: #288FDA;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  /* z-index: 100; */
+}
+.item{
+  width: 90%;
+  height: 50px;
+  margin-left: 5%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  /* border-bottom:dashed 0.5px grey; */
+}
+.enditem{
+  width: 90%;
+  height: 50px;
+  margin-left: 5%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  border-radius: 0 0 10px 10px;
+}
+.topleftdot{
+  width: 8px;
+  /* height: 20px;
+  border-radius: 0 10px 10px 0; */
+  height: 8px;
+  border-radius: 0 0 8px 0;
+  background-color: #288FDA;
+  position: absolute;
+  top: 0px;
+  /* z-index: 100; */
+}
+.toprightdot{
+  width: 8px;
+  /* height: 20px;
+  border-radius: 0 10px 10px 0; */
+  height: 8px;
+  border-radius: 0 0 0 8px;
+  background-color: #288FDA;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  /* z-index: 100; */
+}
+
+.content{
+  padding-left: 20px;
+  line-height: 50px;
+}
+.name{
+  font-size: 15px;
+}
+.address{
+  text-decoration-line: underline;
+  font-size: 11px;
+  padding-left: 10px;
+}
+
+.tips{
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 5%;
+  background-color: white;
+  border-radius: 5px;
+}
+.tips .title{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-weight: 800;
+}
+.tips .wenzi{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+.tips .wenzi .detail{
+  font-size: 13px;
+  text-align: justify;
+  text-align-last: left;
+}

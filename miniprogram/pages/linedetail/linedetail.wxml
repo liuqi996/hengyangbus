@@ -1,0 +1,15 @@
+<!--pages/linedetail/linedetail.wxml-->
+<view class="search_kuangjia" scroll-y="true"> 
+  <view class="search_items" wx:for="{{lists}}" wx:for-item='i' wx:key="lists" data-img='{{i.img}}' data-line='{{i.line}}'>
+    <view selectable="true" class="wenzi">
+      <view class="line"><text selectable="true">{{i.line}}</text></view>
+      <view class="company"><text selectable="true">运营单位：{{i.company}}</text></view>
+      <view class="time"><text selectable="true">运营时间：{{i.time}}</text></view>
+      <view class="price"><text selectable="true">票价：{{i.price}}</text></view>
+      <view class="stop"><text selectable="true">途径站点：{{i.stop}}</text></view>
+      <view class="fanxiang"><text selectable="true" >{{i.fanxiang}}</text></view>
+      <view class="others">{{i.others}}</view><!--
+      <image class="fjt" src="{{i.fileID}}" mode="widthFix" data-src="{{i.fileID}}" bindtap='Img'></image>-->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+/* pages/linedetail/linedetail.wxss */
+page{
+  background-color:#F5F5F5;
+}
+.wenzi{
+  background-color:white;
+  border-radius: 5%;
+  margin: 8px;
+  line-height: normal;
+  box-shadow:1px 1px 1px 1px #DDDDDD;
+}
+.line{
+  padding-top: 6px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bolder;
+  color:#00CCCC;
+  letter-spacing:5rpx;
+  display: flex;
+  justify-content: center;
+}
+.price{
+  font-size:small;
+  margin: 5px;
+}
+.fjt{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.company{
+  font-size: small;
+  margin: 5px;
+}
+.fanxiang{
+  font-size: small;
+  margin: 5px;
+}
+.time{
+  font-size: small;
+  margin: 5px;
+}
+.others{
+  font-size: small;
+  margin: 5px;
+}
+.stop{
+  font-size: small;
+  margin: 6px;
+  padding-bottom: 5px;
+}

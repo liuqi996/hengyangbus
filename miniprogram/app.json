@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/destination/destination",
+    "pages/color/color",
+    "pages/near/near",
+    "pages/xianlutu/xianlutu",
+    "pages/tongzhan/tongzhan",
+    "pages/xian/xian",
+    "pages/linedetail/linedetail",
+    "pages/card/card",
+    "pages/countryside/countryside",
+    "pages/union/union",
+    "pages/resume/resume",
+    "pages/admin-login/admin-login",
+    "pages/admin-cantrol/cantrol",
+    "pages/admin-add-line/admin-add-line"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于定位和获取附近公交站台。"
+    }
+  },
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "雁城巴士助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "线路查询",
+      "iconPath": "images/indexicon.png",
+      "selectedIconPath": "images/indexiconed.png"
+    },
+    {
+      "pagePath": "pages/destination/destination",
+      "text": "热门线路",
+      "iconPath": "images/hoticon.png",
+      "selectedIconPath": "images/hoticoned.png"
+    },
+    {
+      "pagePath": "pages/xian/xian",
+      "text": "县市公交",
+      "iconPath": "images/busicon.png",
+      "selectedIconPath": "images/busiconed.png"
+    },
+    {
+      "pagePath": "pages/color/color",
+      "text": "便民信息",
+      "iconPath": "images/cardicon.png",
+      "selectedIconPath": "images/cardiconed.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

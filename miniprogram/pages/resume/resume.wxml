@@ -1,0 +1,14 @@
+<!--pages/resume/resume.wxml-->
+<view class="panduan" wx:if='{{isShow}}'>
+  <view wx:if='{{canIuse}}' class="login">
+    <button class="button" open-type="getUserInfo" bindgetuserinfo='getUserInfo' hover-class="none">
+      <image class="nullavatarUrl1" src="/images/touxiang.png"></image>
+    </button>
+    <view class="">请点击左方头像登录！</view>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+<view class='userinfo' wx:else>
+  <view class="avatarUrl"><image class="touxiang" src='{{userInfo.avatarUrl}}'></image></view>
+  <view class='nickName'><text>{{userInfo.nickName}}</text><text class="mark">（用户）\n</text><view class="weixin"><text class="cuIcon-weixin lg text-green"></text><text class="wxlogin">微信登录</text></view><view class="welcome">{{userInfo.nickName}}，欢迎使用【雁城巴士助手】小程序！</view></view>
+</view>

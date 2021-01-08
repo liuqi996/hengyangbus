@@ -1,0 +1,114 @@
+/* pages/union/union.wxss */
+page{
+  background-color: #f6f6f6;
+}
+.search{
+  width: 96%;
+  height: 120rpx;
+  margin-top: 6px;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.search_bar{
+  padding-top: 12px;
+  display: flex;
+  margin-left: 10px;
+  /* padding-left: 10px; */
+  /* margin-left: 20px; */
+  padding-bottom: 30px;
+  align-items: center;
+}
+.input{
+  background-color: rgb(240, 240, 240);
+  /* width: 430rpx; */
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 40rpx;
+  margin-left: 10px;
+}
+.icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 7px;
+}
+
+.list-msg {
+  /* margin: 150rpx 10rpx; */
+  /* background-color: rgb(124, 122, 122); */
+  /* background-color: teal; */
+  /* background-color: #eeeeee; */
+  position: relative; 
+  /* width: 20%; */
+  font-size: 12px;
+  /* padding: 0 20rpx; */
+}
+
+/* .list-msg .list-msg2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid #ccc;
+  padding: 0 20rpx;
+} */
+.list-msg .list-msg2{
+  height: 80rpx;
+  border: 2px solid #eee;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* box-sizing: content-box; */
+}
+
+.select_box {
+  background-color: #eee;
+  padding: 0 20rpx;
+  /* width: 82%; */
+  position: absolute;
+  /* z-index: 1; */
+  overflow: hidden;
+  animation: myfirst 0.1s;
+}
+
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+
+  /* to {
+    height: 210rpx;/* 设置显示的长度  和效果配合才有效  这个不写也行 
+  } */
+}
+
+.select_one {
+  height: 60rpx;
+  line-height: 60rpx;
+  /* border-bottom: 1px solid #ccc; */
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.result{
+  background-color: #fff;
+  width: 96%;
+  margin-top: 6px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.result .item{
+  border-bottom: solid #eee 1px;
+  height: 30px;
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
