@@ -57,7 +57,9 @@
 <!-- <view class="ydkl">
   <image src="cloud://bus-bus.6275-bus-bus-1302067424/首页/ydkl.gif" mode="widthFix" style="margin-top:10px;width:100%"></image>
 </view> -->
-
+<view class="ydkl">
+  <image src="../../images/dkzdkz.png" mode="widthFix" style="margin-top:10px;width:100%;border-radius:10px"></image>
+</view>
 <view class="other" bindtap="searchbusstation">
   加载更多站台及线路信息
 </view>
@@ -103,3 +105,5 @@
     <view class="line"><view wx:for="{{m4}}" class="lineitem">{{item}}</view></view>
   </view>
 </view>
+
+<!-- <navigator url="/pages/test/map">map</navigator> -->

@@ -26,7 +26,7 @@ Page({
   onLoad: function (options) {
     var _this = this;
     const db = wx.cloud.database();
-    db.collection('cxgj').get({
+    db.collection('cxgj').orderBy('line', 'asc').get({
       success: res => {
         console.log(res.data)   
         this.setData({

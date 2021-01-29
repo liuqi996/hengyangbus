@@ -14,7 +14,8 @@
     "pages/resume/resume",
     "pages/admin-login/admin-login",
     "pages/admin-cantrol/cantrol",
-    "pages/admin-add-line/admin-add-line"
+    "pages/admin-add-line/admin-add-line",
+    "pages/test/map"
   ],
   "permission": {
     "scope.userLocation": {
@@ -49,7 +50,7 @@
     },
     {
       "pagePath": "pages/color/color",
-      "text": "便民信息",
+      "text": "与你有关",
       "iconPath": "images/cardicon.png",
       "selectedIconPath": "images/cardiconed.png"
     }

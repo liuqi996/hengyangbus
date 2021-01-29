@@ -1,4 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "公交卡充值点"
+  "navigationBarTitleText": "公交卡充值点",
+  "navigationBarBackgroundColor": "#288FDA",
+  "navigationBarTextStyle": "white"
 }

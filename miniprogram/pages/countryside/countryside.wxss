@@ -7,6 +7,9 @@ page{
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 5px;
 }
 .li-wrap .line{
   border-bottom: 1rpx solid #eee;
@@ -18,7 +21,8 @@ page{
 }
 .a{
   margin-top: 8px;
-  border-radius: 1%;
+  margin-bottom: 20px;
+  border-radius: 10px;
   background-color: #fff;
   margin-left: 10px;
   margin-right: 10px;
@@ -27,6 +31,8 @@ page{
 .wenzi{
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .line{
   font-size: 15px;

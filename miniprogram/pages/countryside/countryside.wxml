@@ -1,7 +1,7 @@
 <!--pages/countryside/countryside.wxml-->
 <view class="top">助力乡村振兴</view>
-<view class='a' wx:for="{{ne}}">
-    <view class='wenzi'>
+<view class="a" wx:for="{{ne}}">
+    <view class="wenzi">
         <view class="line" bind:tap='changeToggle' data-index="{{index}}">{{item.line}}
             <image class='entry' style="transform:rotate({{ne[index].isShow?'-90deg':'90deg'}});" src="{{entry}}"></image>
         </view>

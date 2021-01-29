@@ -69,58 +69,47 @@ Page({
     })
     this.setData({'lists':[]})
     var that = this
-       let key = that.data.searchvalue;
-       if (key===undefined){
-         wx.showToast({
-           title: '您还未输入线路号哦！',
-           icon:'none'
-         })
-       }else{
-       console.log("查询的内容", key)
-       const db = wx.cloud.database();
-       const _ = db.command
-       db.collection('stop').where(_.or([{
-         line: db.RegExp({
-           regexp: '.*' + key,
-           options: 'i',
-         })
-       },
-       {
-         stop: db.RegExp({
-           regexp: '.*' + key,
-           options: 'i',
-         })
-       },
-       {
-         fanxiang: db.RegExp({
-           regexp: '.*' + key,
-           options: 'i',
-         })
-       },
-       {
-         company: db.RegExp({
-           regexp: '.*' + key,
-           options: 'i',
-         })
-       },
-   
-       ])).get({
+    let key = that.data.searchvalue;
+    if (key===undefined){
+      wx.showToast({
+        title: '您还未输入线路号哦！',
+        icon:'none'
+      })
+    }else{
+      console.log("查询的内容", key)
+      const db = wx.cloud.database();
+      const _ = db.command
+      db.collection('stop').where(_.or([{
+        line: db.RegExp({
+          regexp: '.*' + key,
+          options: 'i',
+        })
+      },
+      {
+        stop: db.RegExp({
+          regexp: '.*' + key,
+          options: 'i',
+        })
+      },
+      {
+        fanxiang: db.RegExp({
+          regexp: '.*' + key,
+          options: 'i',
+        })
+      },
+      {
+        company: db.RegExp({
+          regexp: '.*' + key,
+          options: 'i',
+        })
+      },
+    ])).get({
          success: res => {
            console.log(res)
            that.setData({
              lists: res.data
             })
             that.gaoliang()
-              // 	let obj={
-            // that.setData({
-            //   list:res.data[i].line
-            // })
-            // console.log(list)
-          //  lists=that.getHilightStrArray(lists[i].line,that.data.searchvalue)
-          //  lists.push(lists)
-          //  that.setData({
-          //    list:list
-          //   })
           },
          fail: err => {
            console.log(err)
@@ -131,66 +120,47 @@ Page({
       return str.replace(new RegExp(`${key}`, 'g'), `%%${key}%%`).split('%%');
     },
 
-    line:function(e){
-      let line = e.currentTarget.dataset.line;
-      console.log(line)
-      wx.navigateTo({
-        url: '../xianlutu/xianlutu?line='+ line
-      })
-    },
+  line:function(e){
+    let line = e.currentTarget.dataset.line;
+    console.log(line)
+    wx.navigateTo({
+      url: '../xianlutu/xianlutu?line='+ line
+    })
+  },
 
-    tongzhan: function(e){
-      let zhandian = e.currentTarget.dataset.zhandian;
-      wx.navigateTo({
-        url: '../tongzhan/tongzhan?zhandian='+ zhandian
-      })
-    },
+  tongzhan: function(e){
+    let zhandian = e.currentTarget.dataset.zhandian;
+    wx.navigateTo({
+      url: '../tongzhan/tongzhan?zhandian='+ zhandian
+    })
+  },
 
-    gaoliang:function(){
-      let that=this;
-        			var searchResultList = []
-        			if(that.data.lists){
-        				for(var i=0;i<that.data.lists.length;i++){
-        					let obj={
-                    line:that.data.lists[i].line
-        					};
-        					//高亮字符串数组
-        					obj.searchArray=that.getHilightStrArray(that.data.lists[i].line,that.data.searchvalue)
-        					searchResultList.push(obj)
-        				} 
-        			}
-        			that.setData({
-        			   searchResultList:searchResultList
-              })
-              console.log(searchResultList)
-      // var list = []
-      //       console.log(this.data.lists)
-      //       var lists=this.data.lists;
-      //       let that=this;
-      //        for(var i=0;i<lists.length;i++){
-      //         let obj={
-      //           line:list[i].line
-      //         }
-      //         console.log(that.data.searchvalue)
-      //         // obj.list=that.getHilightStrArray(res.data[i].line,that.data.searchvalue)
-      //         obj.searchArray=that.getHilightStrArray(lists[i].line,this.data.searchvalue)
-      //         searchArray.push(obj)
-      //       }
-      //       that.setData({
-      //         searchArray
-      //       })
-      //       console.log(searchArray)
-    },
+  gaoliang:function(){
+    let that=this;
+    var searchResultList = []
+    if(that.data.lists){
+      for(var i=0;i<that.data.lists.length;i++){
+      	let obj={line:that.data.lists[i].line};
+      	//高亮字符串数组
+      	obj.searchArray=that.getHilightStrArray(that.data.lists[i].line,that.data.searchvalue)
+      	searchResultList.push(obj)
+      } 
+    }
+    that.setData({
+      searchResultList:searchResultList
+    })
+    console.log(searchResultList)
+  },
 
      more: function () {
       var that = this
       let key = that.data.searchvalue;
       const db = wx.cloud.database();
       const _ = db.command
-      wx.showLoading({
-        title: '正在加载中…',
-        duration: 300
-      })
+      // wx.showLoading({
+      //   title: '正在加载中…',
+      //   duration: 300
+      // })
       let x = this.data.lists_nums + 20
       console.log(x)
       let old_data = this.data.lists
@@ -220,8 +190,7 @@ Page({
             options: 'i',
           })
         },
-    
-        ])) // 限制返回数量为 20 条
+        ]))
         .get()
         .then(res => {
           if(res.data==null || res.data==0 || res.data==" "){
@@ -237,20 +206,20 @@ Page({
           else{
           this.setData({
             lists: old_data.concat(res.data),
-            lists_nums: x
+            lists_nums: x,
           })
+          this.gaoliang()
             console.log(res.data)}
         })
         .catch(err => {
           console.error(err)
         })
       console.log('circle 下一页');
-    
     },
 
   /**
    * 生命周期函数--监听页面加载
-   */
+  */
   onLoad: function (options) {
     this.getMyLocation()
     qqmapsdk = new QQMapWX({

@@ -15,6 +15,7 @@ Page({
       select: !this.data.select
     })
   },
+
   mySelect(e) {
     var name = e.currentTarget.dataset.name;
     var countyid=e.currentTarget.dataset.countyid;
@@ -27,9 +28,10 @@ Page({
       searchvalue:'',
       list:[]
     })
-    console.log("用户选择了",this.data.tihuoWay);
+    //console.log("用户选择了",this.data.tihuoWay);
     this.sousuo()
   },
+
   search:function(e){
     this.setData({
       searchvalue: e.detail.value,
@@ -49,70 +51,66 @@ Page({
     let countyid=this.data.countyid;
     this.setData({'list':[]})
     var that = this;
-       let key = that.data.searchvalue;
-       if (key===undefined){
-         wx.showToast({
-           title: '您还未输入线路号哦！',
-           icon:'none'
-         })
-       }else{
-       console.log("查询的内容", key)
-       const db = wx.cloud.database();
-       const _ = db.command
-      //  if(this.data.countyid=='hy'){
-        if(that.data.countyid=='hy'){
+    let key = that.data.searchvalue;
+
+    if (key===undefined){
+      wx.showToast({
+        title: '您还未输入线路号哦！',
+        icon:'none'
+      })
+    }
+    else{
+      //console.log("查询的内容", key)
+      const db = wx.cloud.database();
+      const _ = db.command
+      if(that.data.countyid=='hy'){
         db.collection('union-line').where(
-             _.or([{
-             countylineid: db.RegExp({
-               regexp: '.*' + key,
-               options: 'i',
-             })
-           }
-          ])
-          
-          ).get({
-             success: res => {
-               console.log(res)
-               that.setData({
-                 list: res.data
-                })
-              },
-             fail: err => {
-               console.log(err)
-             }
-           })}else{
-       db.collection('union-line').where(
-      //    _.or([{
-      //    countylineid: db.RegExp({
-      //      regexp: '.*' + key,
-      //      options: 'i',
-      //    })
-      //  }
-      // ])
-      _.and([
-        {
-           countylineid: db.RegExp({
-             regexp: '.*' + key,
-             options: 'i',
-           })
-         },
-         {
-          county_id:Number(countyid)
-         }
-        ])
-      ).get({
-         success: res => {
-           console.log(res)
-           that.setData({
-             list: res.data
+          _.or([{
+            countylineid: db.RegExp({
+              regexp: '.*' + key,
+              options: 'i',
+            })
+          }])
+        ).get({
+          success: res => {
+            //console.log(res)
+            that.setData({
+              list: res.data
             })
           },
-         fail: err => {
-           console.log(err)
-         }
-       })}
+          fail: err => {
+            console.log(err)
+          }
+        })
       }
-     },
+      else{
+        db.collection('union-line').where(
+        _.and([
+          {
+            countylineid: db.RegExp({
+              regexp: '.*' + key,
+              options: 'i',
+            })
+          },
+          {
+            county_id:Number(countyid)
+          }
+        ])
+      ).get({
+        success: res => {
+          console.log(res)
+          that.setData({
+            list: res.data
+          })
+        },
+        fail: err => {
+          console.log(err)
+        }
+        })
+      }
+    }
+  },
+
   sousuo:function(e){
     let countyid=this.data.countyid;
     console.log(countyid)
@@ -120,16 +118,13 @@ Page({
       fu:0
     })
     const db = wx.cloud.database();
-     //const _ = db.command
-     let that=this;
+    //const _ = db.command
+    let that=this;
     db.collection('union-line').where({
-    //   _openid: 'user-open-id',
-    //   done: false
     county_id:Number(countyid)
     })
     .get({
       success: function(res) {
-        // res.data 是包含以上定义的两条记录的数组
         console.log(res.data)
         that.setData({
           list:res.data
@@ -137,19 +132,17 @@ Page({
       }
     })
   },
-
+  
   more: function () {
     let countyid=this.data.countyid;
     console.log(countyid)
     console.log(this.data.countyid)
-    //var that = this;
-    // let key = that.data.searchvalue;
     const db = wx.cloud.database();
     const _ = db.command
-    wx.showLoading({
-      title: '正在加载中…',
-      duration: 300
-    })
+    // wx.showLoading({
+    //   title: '正在加载中…',
+    //   duration: 300
+    // })
     let x = this.data.list_nums + 20
     console.log(x)
     let old_data = this.data.list
@@ -172,18 +165,17 @@ Page({
           list: old_data.concat(res.data),
           list_nums: x
         })
-          console.log(res.data)}
+        console.log(res.data)}
       })
       .catch(err => {
         console.error(err)
       })
-    console.log('circle 下一页');
-    }else{
-    db.collection('union-line').skip(x)
-    .where({
-      //   _openid: 'user-open-id',
-      //   done: false
-      county_id:Number(countyid)
+      console.log('circle 下一页');
+    }
+    else{
+      db.collection('union-line').skip(x)
+      .where({
+        county_id:Number(countyid)
       })
       .get()
       .then(res => {
@@ -198,16 +190,17 @@ Page({
           })
         }
         else{
-        this.setData({
-          list: old_data.concat(res.data),
-          list_nums: x
-        })
-          console.log(res.data)}
+          this.setData({
+            list: old_data.concat(res.data),
+            list_nums: x
+          })
+          console.log(res.data)
+        }
       })
       .catch(err => {
         console.error(err)
       })
-    console.log('circle 下一页');
+      //console.log('circle 下一页');
     }
   },
 
@@ -243,19 +236,19 @@ Page({
       fu:0,
       list_nums:0
     })
-  let that=this;
-  const db = wx.cloud.database();
-  db.collection('union-line')
-  .get({
-    success: function(res) {
-      // res.data 是包含以上定义的两条记录的数组
-      console.log(res.data)
-      that.setData({
-        list:res.data
-      })
-    }
-  })
-},
+    let that=this;
+    const db = wx.cloud.database();
+    db.collection('union-line')
+    .get({
+      success: function(res){
+        console.log(res.data)
+        that.setData({
+          list:res.data
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -295,7 +288,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    //let fu=this.data.fu;
     if(this.data.fu==0){
       this.more()
     }
